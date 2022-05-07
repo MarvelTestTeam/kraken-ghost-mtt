@@ -12,4 +12,8 @@
 
  Si este id cambia en el ghost que se esté ejecutando para verificar el funcionamiento de las pruebas es algo que no podemos controlar, pero se deja en los reportes la evidencia de que los 20 escenarios funcionan correctamente.
 
+ Se debe modificar el usuario y contraseña en el archivo "properties.json".
+
+ Se debe modificar el dato del puerto en la linea 8 del archivo "ft-001.feature" (Given I navigate to page "http://localhost:2368/ghost/#/signin") para que coincida con el puerto del ghost que se esté ejecutando para validar el ejercicio.
+
 
