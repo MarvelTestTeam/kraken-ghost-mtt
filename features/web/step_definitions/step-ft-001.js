@@ -24,6 +24,9 @@ When('I click next', async function() {
 
 })
 
+
+
+
 Then('I click on create a new post', async function () {
 
     let element = await this.driver.$('#ember27');
