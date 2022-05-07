@@ -40,10 +40,46 @@ When('I enter post title {kraken-string}', async function (postTitle) {
 
 });
 
-When('I enter post body {kraken-string}', async function (postBody) {
+When('I click on body text area', async function () {
+
+    let element = await this.driver.$('#ember64');
+
+    return await element.click();
+
+});
+
+Then('I enter post body {kraken-string}', async function (postBody) {
 
     let element = await this.driver.$('#ember64');
 
     return await element.setValue(postBody);
 
 });
+
+When('I click on publish menu', async function () {
+
+    
+    let element = await this.driver.$('#ember71 > span');
+
+    return await element.click();
+
+});
+
+When('I clic on publish button', async function () {
+
+    
+    let element = await this.driver.$('#ember79 > span');
+
+    return await element.click();
+
+});
+
+Then('I clic on final publish button', async function () {
+
+    
+    let element = await this.driver.$('#ember81 > span');
+
+    return await element.click();
+
+});
+

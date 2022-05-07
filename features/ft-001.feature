@@ -25,12 +25,28 @@ Scenario: Como primer usuario inicio sesion y mandó un mensaje al usuario 2
 
   And I wait for 2 seconds
 
-  And I enter post title "El mesmesimo título"
+  And I enter post title "El título de mostrarle a Afiffe"
 
   And I wait for 1 seconds
 
-  And I enter post body "El mesmesimo cuerpo"
+  And I click on body text area
 
-  And I wait for 10 seconds
+  And I wait for 1 seconds
+  
+  And I enter post body "El cuerpo de mostrarle a Afiffe"
+
+  And I wait for 1 seconds
+
+  And I click on publish menu
+
+  And I wait for 1 seconds
+
+  And I clic on publish button
+
+  And I wait for 1 seconds
+
+  And I clic on final publish button
+
+  And I wait for 30 seconds
 
 
