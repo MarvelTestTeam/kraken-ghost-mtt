@@ -47,6 +47,8 @@ Scenario: Como primer usuario inicio sesion y mandó un mensaje al usuario 2
 
   And I clic on final publish button
 
-  And I wait for 30 seconds
+  And I wait for 1 seconds
 
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
 
+  And I wait for 15 seconds
