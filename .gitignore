@@ -129,3 +129,8 @@ dist
 # Custom Folders to Ignore
 reports/
 .kraken/.device_directory
+.kraken/.1_inbox.txt
+.kraken/.device_directory
+.kraken/.devices_finished
+.kraken/.devices_ready_to_finish
+.kraken/.devices_ready_to_start
