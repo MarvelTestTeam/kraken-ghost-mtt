@@ -24,3 +24,200 @@ When('I click next', async function() {
 
 });
 
+// PR-011
+
+
+When('I click on tags menu pr011', async function () {
+
+    
+    let element = await this.driver.$('#ember13');
+
+    return await element.click();
+
+});
+
+Then('I click on create a new tag pr011', async function () {
+
+    
+    let element = await this.driver.$('#ember55 > span');
+
+    return await element.click();
+
+});
+
+When('I enter wrong color code pr011 {kraken-string}', async function (colorCode) {
+
+    let element = await this.driver.$('#ember66 > div > input');
+
+    return await element.setValue(colorCode);
+
+});
+
+// PR-012
+
+
+When('I click on tags menu pr012', async function () {
+
+    
+    let element = await this.driver.$('#ember13');
+
+    return await element.click();
+
+});
+
+Then('I click on edit tag pr012', async function () {
+
+    
+    let element = await this.driver.$('#ember109 > div > span > svg');
+
+    return await element.click();
+
+});
+
+When('I change the name property pr012 {kraken-string}', async function (tagName) {
+
+    let element = await this.driver.$('#tag-name');
+
+    return await element.setValue(tagName);
+
+});
+
+Then('I click on save button pr012', async function () {
+
+    
+    let element = await this.driver.$('#ember111 > span');
+
+    return await element.click();
+
+});
+
+
+// PR-013
+
+
+When('I click on tags menu pr013', async function () {
+
+    
+    let element = await this.driver.$('#ember13');
+
+    return await element.click();
+
+});
+
+Then('I click on edit tag pr013', async function () {
+
+    
+    let element = await this.driver.$('#ember166 > div > span > svg');
+
+    return await element.click();
+
+});
+
+When('I change the name property pr013', async function () {
+
+    let element = await this.driver.$('#tag-name');
+
+    return await element.setValue('');
+
+});
+
+Then('I click on save button pr013', async function () {
+
+    
+    let element = await this.driver.$('#ember168 > span');
+
+    return await element.click();
+
+});
+
+// PR-014
+
+
+
+Then('I click on leave button pr014', async function () {
+
+    
+    let element = await this.driver.$('#ember199 > div.modal-footer > button.gh-btn.gh-btn-red > span');
+
+    return await element.click();
+
+});
+
+When('I click on tags menu pr014', async function () {
+
+    
+    let element = await this.driver.$('#ember13');
+
+    return await element.click();
+
+});
+
+Then('I click on edit tag pr014', async function () {
+
+    
+    let element = await this.driver.$('#ember229 > div > span > svg');
+
+    return await element.click();
+
+});
+
+When('I enter wrong color code pr014 {kraken-string}', async function (colorCode) {
+
+    let element = await this.driver.$('#ember234 > div > input');
+
+    return await element.setValue(colorCode);
+
+});
+
+Then('I click on save button pr014', async function () {
+
+    
+    let element = await this.driver.$('#ember231 > span');
+
+    return await element.click();
+
+});
+
+
+// PR-015
+
+When('I click on tags menu pr015', async function () {
+
+    
+    let element = await this.driver.$('#ember13');
+
+    return await element.click();
+
+});
+
+Then('I click on edit tag pr015', async function () {
+
+    
+    let element = await this.driver.$('#ember277 > div > span > svg');
+
+    return await element.click();
+
+});
+
+
+Then('I click on delete button pr015', async function () {
+
+    
+    let element = await this.driver.$('body > div.gh-app > div > main > section > div > button > span');
+
+    return await element.click();
+
+});
+
+
+
+
+
+Then('I click on confirm delete button pr015', async function () {
+
+    
+    let element = await this.driver.$('#ember313 > span');
+
+    return await element.click();
+
+});
