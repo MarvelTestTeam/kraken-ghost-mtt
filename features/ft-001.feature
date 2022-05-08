@@ -92,6 +92,10 @@ Scenario: Como primer usuario inicio sesion y mandó un mensaje al usuario 2
 
   And I wait for 1 seconds
 
+  And I click on leave button pr014
+
+  And I wait for 1 seconds
+
   And I click on tags menu pr014
 
   And I wait for 1 seconds

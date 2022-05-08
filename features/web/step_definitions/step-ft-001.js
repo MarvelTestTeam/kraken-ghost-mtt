@@ -69,7 +69,7 @@ When('I click on tags menu pr012', async function () {
 Then('I click on edit tag pr012', async function () {
 
     
-    let element = await this.driver.$('#ember61 > div > span > svg');
+    let element = await this.driver.$('#ember109 > div > span > svg');
 
     return await element.click();
 
@@ -86,7 +86,7 @@ When('I change the name property pr012 {kraken-string}', async function (tagName
 Then('I click on save button pr012', async function () {
 
     
-    let element = await this.driver.$('#ember63 > span');
+    let element = await this.driver.$('#ember111 > span');
 
     return await element.click();
 
@@ -108,7 +108,7 @@ When('I click on tags menu pr013', async function () {
 Then('I click on edit tag pr013', async function () {
 
     
-    let element = await this.driver.$('#ember61 > div > span > svg');
+    let element = await this.driver.$('#ember166 > div > span > svg');
 
     return await element.click();
 
@@ -125,7 +125,7 @@ When('I change the name property pr013', async function () {
 Then('I click on save button pr013', async function () {
 
     
-    let element = await this.driver.$('#ember63 > span');
+    let element = await this.driver.$('#ember168 > span');
 
     return await element.click();
 
@@ -133,6 +133,16 @@ Then('I click on save button pr013', async function () {
 
 // PR-014
 
+
+
+Then('I click on leave button pr014', async function () {
+
+    
+    let element = await this.driver.$('#ember199 > div.modal-footer > button.gh-btn.gh-btn-red > span');
+
+    return await element.click();
+
+});
 
 When('I click on tags menu pr014', async function () {
 
@@ -146,7 +156,7 @@ When('I click on tags menu pr014', async function () {
 Then('I click on edit tag pr014', async function () {
 
     
-    let element = await this.driver.$('#ember61 > div > span > svg');
+    let element = await this.driver.$('#ember229 > div > span > svg');
 
     return await element.click();
 
@@ -154,7 +164,7 @@ Then('I click on edit tag pr014', async function () {
 
 When('I enter wrong color code pr014 {kraken-string}', async function (colorCode) {
 
-    let element = await this.driver.$('#ember66 > div > input');
+    let element = await this.driver.$('#ember234 > div > input');
 
     return await element.setValue(colorCode);
 
@@ -163,7 +173,7 @@ When('I enter wrong color code pr014 {kraken-string}', async function (colorCode
 Then('I click on save button pr014', async function () {
 
     
-    let element = await this.driver.$('#ember63 > span');
+    let element = await this.driver.$('#ember231 > span');
 
     return await element.click();
 
@@ -171,7 +181,6 @@ Then('I click on save button pr014', async function () {
 
 
 // PR-015
-
 
 When('I click on tags menu pr015', async function () {
 
@@ -185,7 +194,7 @@ When('I click on tags menu pr015', async function () {
 Then('I click on edit tag pr015', async function () {
 
     
-    let element = await this.driver.$('#ember61 > div > span > svg');
+    let element = await this.driver.$('#ember277 > div > span > svg');
 
     return await element.click();
 
@@ -208,7 +217,7 @@ Then('I click on delete button pr015', async function () {
 Then('I click on confirm delete button pr015', async function () {
 
     
-    let element = await this.driver.$('#ember97 > span');
+    let element = await this.driver.$('#ember313 > span');
 
     return await element.click();
 
