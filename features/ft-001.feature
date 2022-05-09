@@ -35,7 +35,7 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I enter text "Kraken es una herramienta de código abierto para realizar pruebas automáticas del tipo E2E con aplicaciones móviles para Android y aplicaciones WEB. Esta soporta escenarios donde es requerida la intercomunicación entre usuarios o dispositivos. El proyecto fue desarrollado haciendo uso de Appium y Cucumber, que son librerías disponibles en Node.js para realizar pruebas por medio de una notación que asemeja el lenguaje natural, las cuales permiten crear escenarios a través de la especificación de ejemplos."
 
-  And I wait for 2 seconds
+  And I wait for 1 seconds
 
   And I click on the publish post inputbox
 
@@ -49,11 +49,111 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I wait for 1 seconds
 
-  And I click on posts buttom
+  And I click on posts button pr001
   
   And I wait for 1 seconds
 
   And I click on verify posting
+
+  And I wait for 1 seconds
+
+  # PR-02
+  
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+
+  And I wait for 1 seconds
+
+  And I click on post menu pr002
+
+  And I click on new post button pr002
+
+  And I wait for 1 seconds
+
+  And I enter text "Posting draft ultimo Kraken"
+
+  And I click on redact post inputbox
+
+  And I wait for 1 seconds
+
+  And I enter text "Kraken es una herramienta de código abierto para realizar pruebas automáticas del tipo E2E con aplicaciones móviles para Android y aplicaciones WEB. Esta soporta escenarios donde es requerida la intercomunicación entre usuarios o dispositivos. El proyecto fue desarrollado haciendo uso de Appium y Cucumber, que son librerías disponibles en Node.js para realizar pruebas por medio de una notación que asemeja el lenguaje natural, las cuales permiten crear escenarios a través de la especificación de ejemplos."
+
+  And I wait for 1 seconds
+
+  And I click on posts button pr002
+  
+  And I wait for 1 seconds
+
+  And I click on verify draft posting
+
+  # PR-003
+
+  And I wait for 1 seconds
+
+  And I click on post menu pr003
+
+  And I wait for 1 seconds
+  
+  And I click post to edit pr003
+
+  And I wait for 1 seconds
+
+  And I click on redact post inputbox
+
+  And I enter text "Este es el texto editado "
+
+  And I wait for 1 seconds
+
+  And I click on update button pr003
+
+  And I wait for 1 seconds
+
+  And I click on update final buttom pr003
+
+  And I wait for 1 seconds
+
+  And I click on posts button pr003
+
+  And I wait for 1 seconds
+
+  And I open post to verify pr003
+
+  And I wait for 1 seconds
+  
+  And I click post to edit pr003
+  
+  # PR-005
+
+  And I wait for 1 seconds
+
+  And I click on post menu pr005
+
+  And I click on new post button pr005
+
+  And I click on the redact post inputbox pr005
+
+  And I wait for 1 seconds
+
+  And I enter text "Kraken es una herramienta de código abierto para realizar pruebas automáticas del tipo E2E con aplicaciones móviles para Android y aplicaciones WEB. Esta soporta escenarios donde es requerida la intercomunicación entre usuarios o dispositivos. El proyecto fue desarrollado haciendo uso de Appium y Cucumber, que son librerías disponibles en Node.js para realizar pruebas por medio de una notación que asemeja el lenguaje natural, las cuales permiten crear escenarios a través de la especificación de ejemplos."
+
+  And I wait for 1 seconds
+
+  And I click on the publish post inputbox pr005
+
+  And I wait for 1 seconds
+  
+  And I click on the live publish post inputbox pr005
+
+  And I wait for 1 seconds
+  
+  And I click on the final publish post inputbox pr005
+
+  And I wait for 1 seconds
+
+  And I click on posts button pr005
+  
+  And I wait for 1 seconds
+
+  And I click on verify posting pr005
 
   And I wait for 1 seconds
   

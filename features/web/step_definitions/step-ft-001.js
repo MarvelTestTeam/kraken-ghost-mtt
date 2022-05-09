@@ -24,9 +24,11 @@ When('I click next', async function() {
 
 });
 
-// PR-01
+// PR-001
 
 Then('I click on plus for creating a post', async function () {
+
+    
 
     let element = await this.driver.$('#ember27');
 
@@ -67,9 +69,9 @@ Then('I click on the final publish post inputbox', async function () {
 
   });
 
-Then('I click on posts buttom', async function () {
+  Then('I click on posts button pr001', async function () {
 
-    let element = await this.driver.$('#ember60'); 
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//a[@href="#/posts/"]/span'); 
 
     return await element.click(); 
 
@@ -78,6 +80,167 @@ Then('I click on posts buttom', async function () {
 Then('I click on verify posting', async function () {
 
     let element = await this.driver.$('#ember95');
+    
+    return await element.click(); 
+})
+
+// PR-002
+
+
+Then('I click on post menu pr002', async function () {
+
+    let element = await this.driver.$('//a[@href="#/posts/"]');
+
+    return await element.click();
+
+});
+
+Then('I click on new post button pr002', async function () {
+
+    let element = await this.driver.$('//section[@class="view-actions"]/a[@href="#/editor/post/"]/span[.="New post"]');
+
+    return await element.click();
+
+});
+
+Then('I click on redact post inputbox', async function () {
+
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div');
+
+    return await element.click();
+
+  });
+
+
+
+  Then('I click on posts button pr002', async function () {
+
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//a[@href="#/posts/"]/span'); 
+
+    return await element.click(); 
+
+  });
+
+Then('I click on verify draft posting', async function () {
+
+    let element = await this.driver.$('//a[@title="Drafts"]/span[@class="gh-nav-viewname"]');
+    
+    return await element.click(); 
+})
+
+
+// PR-003
+
+
+
+
+//div[@class='flex flex-row']/section//a[@href='#/posts/']/span
+
+Then('I click on post menu pr003', async function () {
+
+    let element = await this.driver.$('//a[@href="#/posts/"]');
+
+    return await element.click();
+
+});
+
+Then('I click post to edit pr003', async function () {
+
+    //body[@class='ember-application']//section[@class='gh-canvas']/section/ol/li[6]/a[1]/h3[@class='gh-content-entry-title']
+    let element = await this.driver.$('.posts-list > :nth-child(6)');
+
+    return await element.click();
+
+});
+
+Then('I click on update button pr003', async function () {
+
+    let element = await this.driver.$('//section[@class="flex"]/div[1]/div[@role="button"]/span');
+
+    return await element.click();
+
+});
+
+Then('I click on update final buttom pr003', async function () {
+
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Update"]');
+
+    return await element.click();
+
+});
+
+
+
+Then('And I click on posts button pr003', async function () {
+
+    let element = await this.driver.$('//a[@href="#/posts/"]/span');
+
+    return await element.click();
+
+});
+
+// PR-005
+
+Then('I click on post menu pr005', async function () {
+
+    let element = await this.driver.$('//a[@href="#/posts/"]');
+
+    return await element.click();
+
+});
+
+Then('I click on new post button pr005', async function () {
+
+    let element = await this.driver.$('//section[@class="view-actions"]/a[@href="#/editor/post/"]/span[.="New post"]');
+
+    return await element.click();
+
+});
+
+Then('I click on the redact post inputbox pr005', async function () {
+
+    
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div');
+
+    return await element.click();
+
+  });
+
+Then('I click on the publish post inputbox pr005', async function () {
+
+    let element = await this.driver.$('//section[@class="flex"]/div[2]/div[@role="button"]/span');
+
+    return await element.click();
+
+  });
+
+Then('I click on the live publish post inputbox pr005', async function () {
+
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Publish"]');
+
+    return await element.click();
+
+  });
+
+Then('I click on the final publish post inputbox pr005', async function () {
+
+    let element = await this.driver.$('//div[@class="modal-footer"]/button[2]/span[.="Publish"]');
+
+    return await element.click();
+
+  });
+
+  Then('I click on posts button pr005', async function () {
+
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//a[@href="#/posts/"]/span'); 
+
+    return await element.click(); 
+
+  });
+
+Then('I click on verify posting pr005', async function () {
+
+    let element = await this.driver.$('//a[@href="#/posts/"]');
     
     return await element.click(); 
 })
@@ -269,7 +432,7 @@ Then('I click on delete button pr015', async function () {
 
 Then('I click on confirm delete button pr015', async function () {
 
-    
+
     let element = await this.driver.$('//section//span[.="Delete"]');
 
     return await element.click();
