@@ -1,6 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
-When('I enter email {kraken-string}', async function (email) {
+When('I enter email {kraken-string}', async function(email) {
 
     let element = await this.driver.$('#ember7');
 
@@ -8,7 +8,7 @@ When('I enter email {kraken-string}', async function (email) {
 
 });
 
-When('I enter password {kraken-string}', async function (password) {
+When('I enter password {kraken-string}', async function(password) {
 
     let element = await this.driver.$('#ember9');
 
@@ -35,7 +35,7 @@ When('I click a new page', async function() {
 });
 
 
-When('I enter title new page {kraken-string}', async function (tituloNuevoPage) {
+When('I enter title new page {kraken-string}', async function(tituloNuevoPage) {
 
     let element = await this.driver.$('//textarea[@placeholder="Page title"]');
 
@@ -43,7 +43,7 @@ When('I enter title new page {kraken-string}', async function (tituloNuevoPage) 
 
 });
 
-When('I enter description new page {kraken-string}', async function (descripcionNuevoPage) {
+When('I enter description new page {kraken-string}', async function(descripcionNuevoPage) {
 
     let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div');
 
@@ -52,8 +52,8 @@ When('I enter description new page {kraken-string}', async function (descripcion
 });
 
 
-When('I click on publish menu publish page', async function () {
-    
+When('I click on publish menu publish page', async function() {
+
     let element = await this.driver.$('//section[@class="flex"]/div[2]/div[@role="button"]/span');
 
     return await element.click();
@@ -61,7 +61,7 @@ When('I click on publish menu publish page', async function () {
 });
 
 
-When('I clic on publish button page', async function () {
+When('I clic on publish button page', async function() {
 
     let element = await this.driver.$('//div/footer/button[2]/span[.="Publish"]');
 
@@ -70,7 +70,7 @@ When('I clic on publish button page', async function () {
 });
 
 
-When('I visit list pages', async function () {
+When('I visit list pages', async function() {
 
     let element = await this.driver.$('//div[@class="flex flex-row"]/section//a[@href="#/pages/"]/span');
 
@@ -90,7 +90,7 @@ When('I click a new page programmed', async function() {
 });
 
 
-When('I enter title new page programmed {kraken-string}', async function (tituloNuevoPostProgrammed) {
+When('I enter title new page programmed {kraken-string}', async function(tituloNuevoPostProgrammed) {
 
     let element = await this.driver.$('//textarea[@placeholder="Page title"]');
 
@@ -98,7 +98,7 @@ When('I enter title new page programmed {kraken-string}', async function (titulo
 
 });
 
-When('I enter descripcion new page  Programmed {kraken-string}', async function (descripcionNuevoPostProgrammed) {
+When('I enter descripcion new page  Programmed {kraken-string}', async function(descripcionNuevoPostProgrammed) {
 
     let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div');
 
@@ -107,23 +107,23 @@ When('I enter descripcion new page  Programmed {kraken-string}', async function 
 });
 
 
-When('I click on publish menu publish page programmed', async function () {
-    
+When('I click on publish menu publish page programmed', async function() {
+
     let element = await this.driver.$('//section[@class="flex"]/div[2]/div[@role="button"]/span');
 
     return await element.click();
 
 });
 
-When('I click on radiobutton publish page programmed', async function () {
-    
+When('I click on radiobutton publish page programmed', async function() {
+
     let element = await this.driver.$('//section/div/div[2]/div[@class="gh-publishmenu-radio-button"]');
 
     return await element.click();
 
 });
 
-When('I enter Schedule it from later page programmed {kraken-string}', async function (fechaProgramada) {
+When('I enter Schedule it from later page programmed {kraken-string}', async function(fechaProgramada) {
 
     let element = await this.driver.$('//input[@placeholder="YYYY-MM-DD"]');
 
@@ -131,7 +131,7 @@ When('I enter Schedule it from later page programmed {kraken-string}', async fun
 
 });
 
-When('I click on publish button page programmed', async function () {
+When('I click on publish button page programmed', async function() {
 
     let element = await this.driver.$('//div/footer/button[2]/span[.="Schedule"]');
 
@@ -178,7 +178,7 @@ When('I click a button to delete confirm', async function() {
 
 // PR-019: Login de usuario en el sistema - Intentar Invitar Staff sin correo electrónico - Validar que el sistema genere error.
 
-When('I click on Members', async function () {
+When('I click on Members', async function() {
 
     let element = await this.driver.$('//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/members/"]');
 
@@ -187,7 +187,7 @@ When('I click on Members', async function () {
 });
 
 
-When('I click on button new member', async function () {
+When('I click on button new member', async function() {
 
     let element = await this.driver.$('//a[@href="#/members/new/"]/span[.="New member"]');
 
@@ -196,7 +196,7 @@ When('I click on button new member', async function () {
 });
 
 
-When('I enter name a new member {kraken-string}', async function (nombreStaff) {
+When('I enter name a new member {kraken-string}', async function(nombreStaff) {
 
     let element = await this.driver.$('//input[@id="member-name"]');
 
@@ -225,7 +225,7 @@ When('I click a button leave confirm', async function() {
 // PR-020: Login de usuario en el sistema - Intentar Invitar Staff con correo electrónico erroneo - Validar que el sistema genere error de correo erroneo.
 
 
-When('I enter email a new member {kraken-string}', async function (correo) {
+When('I enter email a new member {kraken-string}', async function(correo) {
 
     let element = await this.driver.$('//input[@id="member-email"]');
 
@@ -233,21 +233,51 @@ When('I enter email a new member {kraken-string}', async function (correo) {
 
 });
 
+///----------------Jose-------------
+When('I click a new post.', async function() {
+
+    let element = await this.driver.$('//a[@title="New post"]/span');
+
+    return await element.click();
+
+});
+
+When('I enter text in post', async function() {
+
+    let element = await this.driver.$('//textarea[@placeholder="Post title"]');
+
+    return await element.setValue("Titulo post de prueba");
+
+});
+
+When('I click in doom', async function() {
+
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section/div[1]/div[1]');
+
+    return await element.click();
+
+});
+When('I click in publish post', async function() {
+
+    let element = await this.driver.$('//section[@class="flex"]/div[2]/div[@role="button"]/span');
+
+    return await element.click();
+
+});
 
 
+When('I click in publish post2', async function() {
 
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Publish"]');
 
+    return await element.click();
 
+});
 
+When('I click in publish post3', async function() {
 
+    let element = await this.driver.$('//div[@class="epm-modal-container"]/div//div[@class="modal-footer"]/button[2]/span[.="Publish"]');
 
+    return await element.click();
 
-
-
-
-
-
-
-
-
-
+});
