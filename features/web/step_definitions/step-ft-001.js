@@ -46,8 +46,8 @@ Then('I click on create a new tag pr011', async function () {
 });
 
 When('I enter wrong color code pr011 {kraken-string}', async function (colorCode) {
-
-    let element = await this.driver.$('#ember66 > div > input');
+    
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[1]/div[2]/div/input');
 
     return await element.setValue(colorCode);
 
@@ -67,8 +67,8 @@ When('I click on tags menu pr012', async function () {
 
 Then('I click on edit tag pr012', async function () {
 
-    
-    let element = await this.driver.$('#ember109 > div > span > svg');
+                                       
+    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/ol/li[2]/a[4]/div/span/svg');
 
     return await element.click();
 
