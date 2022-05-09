@@ -307,6 +307,161 @@ Then('I click on verify posting pr005', async function () {
     return await element.click(); 
 })
 
+
+///----------------Jose-------------
+When('I click a new post.', async function() {
+
+    let element = await this.driver.$('//a[@title="New post"]/span');
+
+    return await element.click();
+
+});
+
+When('I enter text in post', async function() {
+
+    let element = await this.driver.$('//textarea[@placeholder="Post title"]');
+
+    return await element.setValue("Titulo post de prueba");
+
+});
+
+When('I click in doom', async function() {
+
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section/div[1]/div[1]');
+
+    return await element.click();
+
+});
+When('I click in publish post', async function() {
+
+    let element = await this.driver.$('//section[@class="flex"]/div[2]/div[@role="button"]/span');
+
+    return await element.click();
+
+});
+
+
+When('I click in publish post2', async function() {
+
+    let element = await this.driver.$('//section/div/div[2]/div[@class="gh-publishmenu-radio-button"]');
+
+    return await element.click();
+
+});
+
+When('I click in publish schedule', async function() {
+
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Schedule"]');
+
+    return await element.click();
+
+});
+
+When('I click in publish schedule2', async function() {
+
+    let element = await this.driver.$('//div[@class="epm-modal-container"]/div//div[@class="modal-footer"]/button[2]/span[.="Schedule"]');
+
+    return await element.click();
+
+});
+
+When('I clear text', async function() {
+
+    let element = await this.driver.$('//textarea[@placeholder="Post title"]');
+
+    return await element.setValue('')
+
+});
+
+When('I click in publish post3', async function() {
+
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Publish"]');
+
+    return await element.click();
+});
+
+When('I click in publish post4', async function() {
+
+    let element = await this.driver.$('/html//div[@class="epm-modal-container"]/div//div[@class="modal-footer"]/button[2]/span[.="Publish"]');
+
+    return await element.click();
+});
+
+When('I select post', async function() {
+
+    let element = await this.driver.$('//section[@class="gh-canvas"]/section/ol/li[2]/a[1]/h3[@class="gh-content-entry-title"]');
+
+    return await element.click();
+});
+
+When('I clear title', async function() {
+
+    let element = await this.driver.$('//textarea[@placeholder="Post title"]');
+
+    return await element.setValue("");
+
+});
+
+When('I click in update', async function() {
+
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//section[@class="flex"]/div[1]/div[@role="button"]/span');
+
+    return await element.click();
+});
+
+When('I click in update2', async function() {
+
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Update"]');
+
+    return await element.click();
+});
+
+When('I click in tag', async function() {
+
+    let element = await this.driver.$('//section[@class="gh-nav-body"]//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/tags/"]');
+
+    return await element.click();
+});
+
+When('I click in new tag', async function() {
+
+    let element = await this.driver.$('//section[@class="view-actions"]/a[@href="#/tags/new/"]/span[.="New tag"]');
+
+    return await element.click();
+});
+
+When('I set name tag', async function() {
+
+    let element = await this.driver.$('//input[@id="tag-name"]');
+
+    return await element.setValue("Tag2");
+
+});
+
+When('I click save tag', async function() {
+
+    let element = await this.driver.$('//section[@class="view-actions"]/button[@type="button"]/span[.="Save"]');
+
+    return await element.click();
+
+});
+
+When('I set color tag', async function() {
+
+    let element = await this.driver.$('//div[@class="gh-tag-settings-multiprop"]/div[2]/div/input[@name="accent-color"]');
+
+    return await element.setValue("FF5733");
+
+});
+
+When('I confirm leave', async function() {
+
+    let element = await this.driver.$('//body/div[6]/div/div/div[@class="ember-view"]/div[@class="fullscreen-modal-container liquid-wormhole-element"]//section//span[.="Leave"]');
+
+    return await element.click();
+
+});
+
 // PR-011
 
 
