@@ -1,6 +1,7 @@
 # kraken-ghost-mtt
  kraken-ghost-mtt
-
+ 
+ En la ruta kraken-ghost-mtt\miso-evidences\reporte-pruebas-exitosas se puede encontrar el reporte de la ejecución de todos los escenarios de pruebas.
 
  Los escenarios estan diseñados para que los 20 se ejecuten en un solo feature llamado "ft-001.feature" y un solo archivo de steps "step-ft-001.js".
  
