@@ -89,7 +89,7 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I wait for 1 seconds
 
-  And I click on post menu pr003
+  And I click on published post menu pr003
 
   And I wait for 1 seconds
   
@@ -97,9 +97,11 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I wait for 1 seconds
 
-  And I click on redact post inputbox
+  And I click on body text area pr003
 
-  And I enter text "Este es el texto editado "
+  And I wait for 1 seconds
+  
+  And I enter post body pr003 "Este es el texto editado "
 
   And I wait for 1 seconds
 
@@ -115,17 +117,45 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I wait for 1 seconds
 
-  And I open post to verify pr003
+  And I wait for 1 seconds
+
+  And I click on published post menu pr003
 
   And I wait for 1 seconds
   
   And I click post to edit pr003
+
+  # PR-004
+
+  And I wait for 1 seconds
   
-  # PR-005
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
 
   And I wait for 1 seconds
 
-  And I click on post menu pr005
+  And I click on published post menu pr004
+
+  And I wait for 1 seconds
+  
+  And I click post to edit pr004
+
+  And I wait for 1 seconds
+
+  And I click lateral edition barr pr004
+  
+  And I wait for 1 seconds
+
+  And I click on delete link pr004
+  
+  And I wait for 1 seconds
+
+  And I click on delete confirmation pr004
+  
+  # PR-005  
+  
+  And I wait for 1 seconds
+
+  And I click on post general menu pr005
 
   And I click on new post button pr005
 

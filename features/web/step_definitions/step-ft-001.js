@@ -133,12 +133,10 @@ Then('I click on verify draft posting', async function () {
 
 
 
+Then('I click on published post menu pr003', async function () {
 
-//div[@class='flex flex-row']/section//a[@href='#/posts/']/span
-
-Then('I click on post menu pr003', async function () {
-
-    let element = await this.driver.$('//a[@href="#/posts/"]');
+    //div[@class='gh-app']/div/nav[1]//section[@class='gh-nav-body']//ul[@class='gh-nav-list gh-nav-manage']/li[@class='gh-nav-list-new relative']/div/div/ul[@class='gh-nav-view-list']//a[@title='Published']/span[@class='gh-nav-viewname']
+    let element = await this.driver.$('//ul[@class="gh-nav-list gh-nav-manage"]/li[@class="gh-nav-list-new relative"]/div/div/ul[@class="gh-nav-view-list"]//a[@title="Published"]/span[@class="gh-nav-viewname"]');
 
     return await element.click();
 
@@ -146,7 +144,7 @@ Then('I click on post menu pr003', async function () {
 
 Then('I click post to edit pr003', async function () {
 
-    //body[@class='ember-application']//section[@class='gh-canvas']/section/ol/li[6]/a[1]/h3[@class='gh-content-entry-title']
+
     let element = await this.driver.$('.posts-list > :nth-child(6)');
 
     return await element.click();
@@ -155,7 +153,7 @@ Then('I click post to edit pr003', async function () {
 
 When('I click on body text area pr003', async function () {
 
-    let element = await this.driver.$('#ember64');
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div/p');
 
     return await element.click();
 
@@ -163,7 +161,7 @@ When('I click on body text area pr003', async function () {
 
 Then('I enter post body pr003 {kraken-string}', async function (postBody) {
 
-    let element = await this.driver.$('#ember64');
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div/p');
 
     return await element.setValue(postBody);
 
@@ -171,7 +169,7 @@ Then('I enter post body pr003 {kraken-string}', async function (postBody) {
 
 Then('I click on update button pr003', async function () {
 
-    let element = await this.driver.$('//section[@class="flex"]/div[1]/div[@role="button"]/span');
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//section[@class="flex"]/div[1]/div[@role="button"]/span');
 
     return await element.click();
 
@@ -187,17 +185,65 @@ Then('I click on update final buttom pr003', async function () {
 
 
 
-Then('And I click on posts button pr003', async function () {
+Then('I click on posts button pr003', async function () {
 
-    let element = await this.driver.$('//a[@href="#/posts/"]/span');
+    let element = await this.driver.$('//a[@href="#/posts/?type=published"]/span');
 
     return await element.click();
 
 });
 
+// PR-004
+
+Then('I click on published post menu pr004', async function () {
+
+    //div[@class='gh-app']/div/nav[1]//section[@class='gh-nav-body']//ul[@class='gh-nav-list gh-nav-manage']/li[@class='gh-nav-list-new relative']/div/div/ul[@class='gh-nav-view-list']//a[@title='Published']/span[@class='gh-nav-viewname']
+    let element = await this.driver.$('//ul[@class="gh-nav-list gh-nav-manage"]/li[@class="gh-nav-list-new relative"]/div/div/ul[@class="gh-nav-view-list"]//a[@title="Published"]/span[@class="gh-nav-viewname"]');
+
+    return await element.click();
+
+});
+
+Then('I click post to edit pr004', async function () {
+
+
+    let element = await this.driver.$('.posts-list > :nth-child(5)');
+
+    return await element.click();
+
+});
+
+Then('I click lateral edition barr pr004', async function () {
+
+
+    let element = await this.driver.$('body > div.gh-app > div > main > button > span > svg');
+
+    return await element.click();
+
+});
+
+Then('I click on delete link pr004', async function () {
+
+
+    let element = await this.driver.$('//div[@id="entry-controls"]//form/button[@type="button"]/span');
+
+    return await element.click();
+
+});
+
+Then('I click on delete confirmation pr004', async function () {
+
+
+    let element = await this.driver.$('//div[@class="modal-footer"]/button[2]/span[.="Delete"]');
+
+    return await element.click();
+
+});
+
+
 // PR-005
 
-Then('I click on post menu pr005', async function () {
+Then('I click on post general menu pr005', async function () {
 
     let element = await this.driver.$('//a[@href="#/posts/"]');
 
