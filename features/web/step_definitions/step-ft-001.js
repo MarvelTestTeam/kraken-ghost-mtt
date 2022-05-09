@@ -153,6 +153,22 @@ Then('I click post to edit pr003', async function () {
 
 });
 
+When('I click on body text area pr003', async function () {
+
+    let element = await this.driver.$('#ember64');
+
+    return await element.click();
+
+});
+
+Then('I enter post body pr003 {kraken-string}', async function (postBody) {
+
+    let element = await this.driver.$('#ember64');
+
+    return await element.setValue(postBody);
+
+});
+
 Then('I click on update button pr003', async function () {
 
     let element = await this.driver.$('//section[@class="flex"]/div[1]/div[@role="button"]/span');
