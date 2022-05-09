@@ -24,13 +24,70 @@ When('I click next', async function() {
 
 });
 
+// PR-01
+
+Then('I click on plus for creating a post', async function () {
+
+    let element = await this.driver.$('#ember27');
+
+    return await element.click();
+
+});
+
+Then('I click on the redact post inputbox', async function () {
+
+    
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div');
+
+    return await element.click();
+
+  });
+
+Then('I click on the publish post inputbox', async function () {
+
+    let element = await this.driver.$('#ember71');
+
+    return await element.click();
+
+  });
+
+Then('I click on the live publish post inputbox', async function () {
+
+    let element = await this.driver.$('#ember79');
+
+    return await element.click();
+
+  });
+
+Then('I click on the final publish post inputbox', async function () {
+
+    let element = await this.driver.$('#ember81');
+
+    return await element.click();
+
+  });
+
+Then('I click on posts buttom', async function () {
+
+    let element = await this.driver.$('#ember60'); 
+
+    return await element.click(); 
+
+  });
+
+Then('I click on verify posting', async function () {
+
+    let element = await this.driver.$('#ember95');
+    
+    return await element.click(); 
+})
+
 // PR-011
 
 
 When('I click on tags menu pr011', async function () {
 
-    
-    let element = await this.driver.$('#ember13');
+    let element = await this.driver.$('//section[@class="gh-nav-body"]//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/tags/"]');
 
     return await element.click();
 
@@ -38,8 +95,7 @@ When('I click on tags menu pr011', async function () {
 
 Then('I click on create a new tag pr011', async function () {
 
-    
-    let element = await this.driver.$('#ember55 > span');
+    let element = await this.driver.$('//section[@class="view-actions"]/a[@href="#/tags/new/"]/span[.="New tag"]');
 
     return await element.click();
 
@@ -47,7 +103,7 @@ Then('I click on create a new tag pr011', async function () {
 
 When('I enter wrong color code pr011 {kraken-string}', async function (colorCode) {
     
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[1]/div[2]/div/input');
+    let element = await this.driver.$('//div[@class="gh-tag-settings-multiprop"]/div[2]/div/input[@name="accent-color"]');
 
     return await element.setValue(colorCode);
 
@@ -59,7 +115,7 @@ When('I enter wrong color code pr011 {kraken-string}', async function (colorCode
 When('I click on tags menu pr012', async function () {
 
     
-    let element = await this.driver.$('#ember13');
+    let element = await this.driver.$('//section[@class="gh-nav-body"]//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/tags/"]');
 
     return await element.click();
 
@@ -67,8 +123,7 @@ When('I click on tags menu pr012', async function () {
 
 Then('I click on edit tag pr012', async function () {
 
-                                       
-    let element = await this.driver.$('/html/body/div[2]/div/main/section/section/ol/li[2]/a[4]/div/span/svg');
+    let element = await this.driver.$('//a[1]/h3[@class="gh-tag-list-name"]');
 
     return await element.click();
 
@@ -85,7 +140,7 @@ When('I change the name property pr012 {kraken-string}', async function (tagName
 Then('I click on save button pr012', async function () {
 
     
-    let element = await this.driver.$('#ember111 > span');
+    let element = await this.driver.$('//section[@class="view-actions"]/button[@type="button"]/span[.="Save"]');
 
     return await element.click();
 
@@ -98,7 +153,7 @@ Then('I click on save button pr012', async function () {
 When('I click on tags menu pr013', async function () {
 
     
-    let element = await this.driver.$('#ember13');
+    let element = await this.driver.$('//section[@class="gh-nav-body"]//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/tags/"]');
 
     return await element.click();
 
@@ -106,8 +161,8 @@ When('I click on tags menu pr013', async function () {
 
 Then('I click on edit tag pr013', async function () {
 
-    
-    let element = await this.driver.$('#ember166 > div > span > svg');
+  
+    let element = await this.driver.$('//section[@class="gh-canvas"]/section/ol/li[2]/a[1]/h3[@class="gh-tag-list-name"]');
 
     return await element.click();
 
@@ -123,8 +178,7 @@ When('I change the name property pr013', async function () {
 
 Then('I click on save button pr013', async function () {
 
-    
-    let element = await this.driver.$('#ember168 > span');
+    let element = await this.driver.$('//section[@class="view-actions"]/button[@type="button"]/span[.="Save"]');
 
     return await element.click();
 
@@ -136,8 +190,8 @@ Then('I click on save button pr013', async function () {
 
 Then('I click on leave button pr014', async function () {
 
-    
-    let element = await this.driver.$('#ember199 > div.modal-footer > button.gh-btn.gh-btn-red > span');
+
+    let element = await this.driver.$('//section//span[.="Leave"]');
 
     return await element.click();
 
@@ -146,7 +200,7 @@ Then('I click on leave button pr014', async function () {
 When('I click on tags menu pr014', async function () {
 
     
-    let element = await this.driver.$('#ember13');
+    let element = await this.driver.$('//section[@class="gh-nav-body"]//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/tags/"]');
 
     return await element.click();
 
@@ -155,7 +209,7 @@ When('I click on tags menu pr014', async function () {
 Then('I click on edit tag pr014', async function () {
 
     
-    let element = await this.driver.$('#ember229 > div > span > svg');
+    let element = await this.driver.$('//section[@class="gh-canvas"]/section/ol/li[2]/a[1]/h3[@class="gh-tag-list-name"]');
 
     return await element.click();
 
@@ -163,7 +217,7 @@ Then('I click on edit tag pr014', async function () {
 
 When('I enter wrong color code pr014 {kraken-string}', async function (colorCode) {
 
-    let element = await this.driver.$('#ember234 > div > input');
+    let element = await this.driver.$('//div[@class="gh-tag-settings-multiprop"]/div[2]/div/input[@name="accent-color"]');
 
     return await element.setValue(colorCode);
 
@@ -172,7 +226,7 @@ When('I enter wrong color code pr014 {kraken-string}', async function (colorCode
 Then('I click on save button pr014', async function () {
 
     
-    let element = await this.driver.$('#ember231 > span');
+    let element = await this.driver.$('//section[@class="view-actions"]/button[@type="button"]/span[.="Save"]');
 
     return await element.click();
 
@@ -184,7 +238,7 @@ Then('I click on save button pr014', async function () {
 When('I click on tags menu pr015', async function () {
 
     
-    let element = await this.driver.$('#ember13');
+    let element = await this.driver.$('//section[@class="gh-nav-body"]//ul[@class="gh-nav-list gh-nav-manage"]//a[@href="#/tags/"]');
 
     return await element.click();
 
@@ -193,7 +247,7 @@ When('I click on tags menu pr015', async function () {
 Then('I click on edit tag pr015', async function () {
 
     
-    let element = await this.driver.$('#ember277 > div > span > svg');
+    let element = await this.driver.$('//section[@class="gh-canvas"]/section/ol/li[2]/a[1]/h3[@class="gh-tag-list-name"]');
 
     return await element.click();
 
@@ -202,8 +256,8 @@ Then('I click on edit tag pr015', async function () {
 
 Then('I click on delete button pr015', async function () {
 
-    
-    let element = await this.driver.$('body > div.gh-app > div > main > section > div > button > span');
+
+    let element = await this.driver.$('//section[@class="gh-canvas"]/div/button[@type="button"]/span[.="Delete tag"]');
 
     return await element.click();
 
@@ -216,7 +270,7 @@ Then('I click on delete button pr015', async function () {
 Then('I click on confirm delete button pr015', async function () {
 
     
-    let element = await this.driver.$('#ember313 > span');
+    let element = await this.driver.$('//section//span[.="Delete"]');
 
     return await element.click();
 
