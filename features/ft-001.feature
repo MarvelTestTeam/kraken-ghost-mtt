@@ -3,7 +3,7 @@ Feature: Testing sitio ghost
 
 @user1 @web
 
-Scenario: 20 Escenarios de testing sobre sitio ghost
+Scenario: 1 20 Escenarios de testing sobre sitio ghost
 
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
 
@@ -57,9 +57,25 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I wait for 1 seconds
 
+  @user2 @web
+
+  Scenario: 2 20 Escenarios de testing sobre sitio ghost
+
   # PR-02
   
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+   Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
 
   And I wait for 1 seconds
 
@@ -84,6 +100,26 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I wait for 1 seconds
 
   And I click on verify draft posting
+
+  @user3 @web
+
+Scenario: 3 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
 
   # PR-003
 
@@ -125,11 +161,27 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   
   And I click post to edit pr003
 
-  # PR-004
+  @user4 @web
+
+Scenario: 4 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
 
   And I wait for 1 seconds
-  
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
+
+  # PR-004
 
   And I wait for 1 seconds
 
@@ -150,6 +202,26 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I wait for 1 seconds
 
   And I click on delete confirmation pr004
+
+  @user5 @web
+
+  Scenario: 5 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
   
   # PR-005  
   
@@ -184,6 +256,26 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I wait for 1 seconds
 
   And I click on verify posting pr005
+
+  And I wait for 1 seconds
+
+  @user6 @web
+
+  Scenario: 6 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
 
   And I wait for 1 seconds
 
@@ -244,6 +336,28 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I wait for 1 seconds
 #--
 
+
+
+  @user7 @web
+
+Scenario: 7 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
+
   Given I navigate to page "http://localhost:2368/ghost/#/posts?type=scheduled"
 
   
@@ -277,9 +391,26 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   Given I navigate to page "http://localhost:2368/ghost/#/posts?type=scheduled"
 
-  And I wait for 1 seconds
   
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  
+
+  @user8 @web
+
+Scenario: 8 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
 
   And I wait for 1 seconds
 
@@ -303,9 +434,27 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   Given I navigate to page "http://localhost:2368/ghost/#/tags"
 
+
+
+  @user9 @web
+
+Scenario: 9 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
   And I wait for 1 seconds
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
 
   # PR-009: Retornar a página de dashboard - Intento de Creación de Tag sin Nombre - Validar que el sistma emita error
 
@@ -323,9 +472,27 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   Given I navigate to page "http://localhost:2368/ghost/#/tags"
 
+  
+
+  @user10 @web
+
+Scenario: 10 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
   And I wait for 1 seconds
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
 
   # PR-010:  Retornar a página de dashboard - Crear tag con color - Validar que quede guardado el color en la información de tag
 
@@ -349,13 +516,29 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   #Given I navigate to page "http://localhost:2368/ghost/#/tags"
 
-  #And I wait for 1 seconds
-  
-  # PR-011
-  
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  #And I wait for 1 seconds  
+
+  @user11 @web
+
+  Scenario: 11 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
 
   And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
+  
+  # PR-011
 
   And I click on tags menu pr011
 
@@ -366,12 +549,29 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I wait for 1 seconds
 
   And I enter wrong color code pr011 "trew12"
-    
-  # PR-012
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  @user12 @web
+
+Scenario: 12 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
 
   And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
+
+     
+  # PR-012
 
   And I click on tags menu pr012
 
@@ -391,13 +591,29 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I click on tags menu pr012
 
+  And I wait for 1 seconds  
+
+  @user13 @web
+
+Scenario: 13 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
   And I wait for 1 seconds
   
     # PR-013
-
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
-
-  And I wait for 1 seconds
 
   And I click on tags menu pr013
 
@@ -414,12 +630,30 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I click on save button pr013
 
   And I wait for 1 seconds
-  
-    # PR-014
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  
+
+  @user14 @web
+
+Scenario: 14 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
 
   And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
+  
+    # PR-014
 
   And I click on leave button pr014
 
@@ -440,12 +674,30 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   And I click on save button pr014
 
   And I wait for 1 seconds
-  
-  # PR-015
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  
+
+  @user15 @web
+
+Scenario: 15 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
 
   And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
+  
+  # PR-015
 
   And I click on tags menu pr015
 
@@ -461,7 +713,27 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I click on confirm delete button pr015
 
-  And I wait for 5 seconds
+  And I wait for 5 seconds  
+
+  @user16 @web
+
+Scenario: 16 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
 
   # PR-016: Login de usuario en el sistema - Crear Page en estado Publicado - Validar que aparezca con el estado publicado en el listado de Pages
 
@@ -493,7 +765,25 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I wait for 1 seconds
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  
+
+  @user17 @web
+
+Scenario: 17 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
 
   And I wait for 1 seconds
 
@@ -538,6 +828,28 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
   Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
 
   And I wait for 1 seconds
+
+  
+
+  @user18 @web
+
+Scenario: 18 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And I wait for 1 seconds
+
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
+
+  And I wait for 1 seconds
   
   # PR-018: Login de usuario en el sistema - Eliminar Page en estado Publicado - Validar que NO aparezca en el listado de Pages
 
@@ -557,9 +869,25 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I click a button to delete confirm
 
+  And I wait for 1 seconds  
+
+  @user19 @web
+
+Scenario: 19 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
   And I wait for 1 seconds
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
 
   And I wait for 1 seconds
 
@@ -587,9 +915,25 @@ Scenario: 20 Escenarios de testing sobre sitio ghost
 
   And I click a button leave confirm
 
+  And I wait for 1 seconds  
+
+  @user20 @web
+
+Scenario: 20 20 Escenarios de testing sobre sitio ghost
+
+  Given I navigate to page "http://localhost:2368/ghost/#/signin"
+
   And I wait for 1 seconds
 
-  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  When I enter email "<USERNAME_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I enter password "<PASSWORD_GHOST>"
+
+  And I wait for 1 seconds
+
+  And I click next
 
   And I wait for 1 seconds
 
