@@ -26,11 +26,19 @@ When('I click next', async function() {
 
 // PR-001
 
-Then('I click on plus for creating a post', async function () {
+Then('I click on post general menu pr001', async function () {
 
     
 
-    let element = await this.driver.$('#ember27');
+    let element = await this.driver.$('//a[@href="#/posts/"]');
+
+    return await element.click();
+
+});
+
+Then('I click on new post button pr001', async function () {
+
+    let element = await this.driver.$('//section[@class="view-actions"]/a[@href="#/editor/post/"]/span[.="New post"]');
 
     return await element.click();
 
@@ -47,15 +55,17 @@ Then('I click on the redact post inputbox', async function () {
 
 Then('I click on the publish post inputbox', async function () {
 
-    let element = await this.driver.$('#ember71');
+    
+    let element = await this.driver.$('//div[@class="flex flex-row"]/section//section[@class="flex"]/div[2]/div[@role="button"]/span');
 
     return await element.click();
 
   });
 
+  
 Then('I click on the live publish post inputbox', async function () {
 
-    let element = await this.driver.$('#ember79');
+    let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Publish"]');
 
     return await element.click();
 
@@ -63,7 +73,8 @@ Then('I click on the live publish post inputbox', async function () {
 
 Then('I click on the final publish post inputbox', async function () {
 
-    let element = await this.driver.$('#ember81');
+    
+    let element = await this.driver.$('//div[@class="epm-modal-container"]/div//div[@class="modal-footer"]/button[2]/span[.="Publish"]');
 
     return await element.click();
 
@@ -79,7 +90,7 @@ Then('I click on the final publish post inputbox', async function () {
 
 Then('I click on verify posting', async function () {
 
-    let element = await this.driver.$('#ember95');
+    let element = await this.driver.$('//a[@href="#/posts/"]');
     
     return await element.click(); 
 })
