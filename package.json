@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/MarvelTestTeam/kraken-ghost-mtt#readme",
   "dependencies": {
-    "kraken-node": "^1.0.24"
+    "kraken-node": "^1.0.24",
+    "playwright": "^1.22.0",
+    "resemblejs": "^4.1.0"
   }
 }
