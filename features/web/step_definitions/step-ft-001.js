@@ -2,7 +2,8 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 
 When('I enter email {kraken-string}', async function (email) {
 
-    let element = await this.driver.$('#ember7');
+    
+    let element = await this.driver.$('//input[@name="identification"]');
 
     return await element.setValue(email);
 
@@ -10,15 +11,18 @@ When('I enter email {kraken-string}', async function (email) {
 
 When('I enter password {kraken-string}', async function (password) {
 
-    let element = await this.driver.$('#ember9');
+    
+    let element = await this.driver.$('//input[@name="password"]');
 
     return await element.setValue(password);
 
 });
 
 When('I click next', async function() {
+//form[@id='login']//span[.='Sign in']
+    let element = await this.driver.$('//span[.="Sign in"]');
 
-    let element = await this.driver.$('#ember11');
+    await this.driver.saveScreenshot('./captura.png');
 
     return await element.click();
 
@@ -55,8 +59,9 @@ Then('I click on the redact post inputbox', async function () {
 
 Then('I click on the publish post inputbox', async function () {
 
-    
-    let element = await this.driver.$('//div[@class="flex flex-row"]/section//section[@class="flex"]/div[2]/div[@role="button"]/span');
+    //body/div[2]//main[@role='main']/section/header/section/div/div[@role='button']/span
+
+    let element = await this.driver.$('//main[@role="main"]/section/header/section/div/div[@role="button"]/span');
 
     return await element.click();
 
@@ -71,18 +76,11 @@ Then('I click on the live publish post inputbox', async function () {
 
   });
 
-Then('I click on the final publish post inputbox', async function () {
-
-    
-    let element = await this.driver.$('//div[@class="epm-modal-container"]/div//div[@class="modal-footer"]/button[2]/span[.="Publish"]');
-
-    return await element.click();
-
-  });
 
   Then('I click on posts button pr001', async function () {
 
-    let element = await this.driver.$('//div[@class="flex flex-row"]/section//a[@href="#/posts/"]/span'); 
+    //html/body/div[2]//main[@role='main']/section//a[@href='#/posts/']
+    let element = await this.driver.$('//a[@href="#/posts/"]'); 
 
     return await element.click(); 
 
@@ -90,7 +88,9 @@ Then('I click on the final publish post inputbox', async function () {
 
 Then('I click on verify posting', async function () {
 
-    let element = await this.driver.$('//a[@href="#/posts/"]');
+    //body/div[2]/div/nav[1]/section[@class='gh-nav-body']//ul[@class='gh-nav-list gh-nav-manage']/li[@class='gh-nav-list-new relative']/div/div//a[@title='Published']/span[@class='gh-nav-viewname']
+
+    let element = await this.driver.$('//a[@title="Published"]/span[@class="gh-nav-viewname"]');
     
     return await element.click(); 
 })
@@ -114,26 +114,17 @@ Then('I click on new post button pr002', async function () {
 
 });
 
-Then('I click on redact post inputbox', async function () {
-
-    let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div');
-
-    return await element.click();
-
-  });
-
-
 
   Then('I click on posts button pr002', async function () {
 
-    let element = await this.driver.$('//div[@class="flex flex-row"]/section//a[@href="#/posts/"]/span'); 
+    let element = await this.driver.$('//a[@href="#/posts/"]');
 
     return await element.click(); 
 
   });
 
 Then('I click on verify draft posting', async function () {
-
+   //body/div[2]/div/nav[1]/section[@class='gh-nav-body']//ul[@class='gh-nav-list gh-nav-manage']/li[@class='gh-nav-list-new relative']/div/div//a[@title='Drafts']/span[@class='gh-nav-viewname']
     let element = await this.driver.$('//a[@title="Drafts"]/span[@class="gh-nav-viewname"]');
     
     return await element.click(); 
@@ -162,6 +153,18 @@ Then('I click post to edit pr003', async function () {
 
 });
 
+//body/div[2]//main[@role='main']/section/div[1]//textarea[@placeholder='Post Title']
+
+Then('I click post to tittle edit pr003', async function () {
+
+
+    let element = await this.driver.$('//textarea[@placeholder="Post Title"]');
+
+    return await element.click();
+
+});
+
+
 When('I click on body text area pr003', async function () {
 
     let element = await this.driver.$('//div[@class="flex flex-row"]/section//article/div[@class="koenig-editor__editor-wrapper"]/div/p');
@@ -179,8 +182,8 @@ Then('I enter post body pr003 {kraken-string}', async function (postBody) {
 });
 
 Then('I click on update button pr003', async function () {
-
-    let element = await this.driver.$('//div[@class="flex flex-row"]/section//section[@class="flex"]/div[1]/div[@role="button"]/span');
+//body/div[2]//main[@role='main']/section/header/section/div/div[@role='button']/span
+    let element = await this.driver.$('//main[@role="main"]/section/header/section/div/div[@role="button"]/span');
 
     return await element.click();
 
@@ -188,17 +191,27 @@ Then('I click on update button pr003', async function () {
 
 Then('I click on update final buttom pr003', async function () {
 
+    //div[@id='ember-basic-dropdown-wormhole']/div/footer/button[2]/span[.='Update']
+
     let element = await this.driver.$('//div[@id="ember-basic-dropdown-wormhole"]/div/footer/button[2]/span[.="Update"]');
 
     return await element.click();
 
 });
 
+Then('I click on update post buttom pr003', async function () {
+
+//main[@role='main']/section//a[@href='#/posts/?type=published']
+    let element = await this.driver.$('//main[@role="main"]/section//a[@href="#/posts/?type=published"]');
+
+    return await element.click();
+
+});
 
 
 Then('I click on posts button pr003', async function () {
 
-    let element = await this.driver.$('//a[@href="#/posts/?type=published"]/span');
+    let element = await this.driver.$('//a[@title="Published"]/span[@class="gh-nav-viewname"]');
 
     return await element.click();
 
@@ -214,7 +227,7 @@ Then('I click on published post menu pr004', async function () {
     return await element.click();
 
 });
-
+/*
 Then('I click post to edit pr004', async function () {
 
 
@@ -226,8 +239,10 @@ Then('I click post to edit pr004', async function () {
 
 Then('I click lateral edition barr pr004', async function () {
 
+     //*[@id="ember2074"]/header/section/button 
 
-    let element = await this.driver.$('body > div.gh-app > div > main > button > span > svg');
+     //#ember2074 > header > section > button
+    let element = await this.driver.$('header > section > button');
 
     return await element.click();
 
@@ -236,16 +251,20 @@ Then('I click lateral edition barr pr004', async function () {
 Then('I click on delete link pr004', async function () {
 
 
-    let element = await this.driver.$('//div[@id="entry-controls"]//form/button[@type="button"]/span');
 
+//#entry-controls > div.settings-menu-pane-in.settings-menu.settings-menu-pane > div.settings-menu-content > form > button
+
+    let element = await this.driver.$('#entry-controls > div.settings-menu-pane-in.settings-menu.settings-menu-pane > div.settings-menu-content > form > button');
+
+    
     return await element.click();
 
 });
 
 Then('I click on delete confirmation pr004', async function () {
 
-
-    let element = await this.driver.$('//div[@class="modal-footer"]/button[2]/span[.="Delete"]');
+        //body/div[4]/div[3]/div/div[@class='ember-view']/div[@class='fullscreen-modal-container liquid-wormhole-element']//section//span[.='Delete']
+    let element = await this.driver.$('//section//span[.="Delete"]');
 
     return await element.click();
 
@@ -874,4 +893,4 @@ When('I enter email a new member {kraken-string}', async function (correo) {
 
     return await element.setValue(correo);
 
-});
+});*/
