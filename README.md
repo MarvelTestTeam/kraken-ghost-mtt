@@ -33,29 +33,26 @@ FN12	Listado de Pages
 FN13	Eliminar Pagina
 FN14	Invitar Staff
 
-Identificador de la prueba	"Fecha Entrega
-(dd/mm/aaaa)"	Desarrollador	Funcionalidad	"Requerimiento
-(Func., No func.)"	"Tipo de escenario
-(Positivo, Negativo, Mix)"	Nombre del escenario
-PR-001	8/5/2022	Afiffe	FN02	Funcional	Positivo	Login de usuario en el sistema - Creación de Post en estado publicado - Validar que el post aparezca en la bandeja de publicados
-PR-002	8/5/2022	Afiffe	FN02	Funcional	Positivo	Retornar a página de dashboard - Creación de Post en estado borrador - Validar que el post aparezca en la bandeja de borradores
-PR-003	8/5/2022	Afiffe	FN03	Funcional	Positivo	Retornar a página de dashboard - Edición del cuerpo del Post - Validación de cambios aplicados en la página del blog
-PR-004	8/5/2022	Afiffe	FN04	Funcional	Positivo	Retornar a página de dashboard - Eliminación de Post en estado publicado - Validar que el post no aparezca en el listado de post publicados
-PR-005	8/5/2022	Afiffe	FN02	Funcional	Negativo	Retornar a página de dashboard - Creación de Post sin título en estado publicado - Validar que el post aparezca en el listado de post publicados con titulo (untitled)
-PR-006	8/5/2022	Jose	FN03	Funcional	Negativo	Retornar a página de dashboard - Edición de Post en estado publicado borrando el título - Validar que el post aparezca en el listado de post publicados con titulo (untitled)
-PR-007	8/5/2022	Jose	FN02	Funcional	Positivo	Retornar a página de dashboard - Creación de Post en estado programado - Validar que el post aparezca en la bandeja de programados
-PR-008	8/5/2022	Jose	FN05	Funcional	Positivo	Retornar a página de dashboard - Creación de Tag - Validar que el nuevo Tag aparezca en la lista de tags
-PR-009	8/5/2022	Jose	FN05	Funcional	Negativo	Retornar a página de dashboard - Intento de Creación de Tag sin Nombre - Validar que el sistma emita error
-PR-010	8/5/2022	Jose	FN05	Funcional	Positivo	Retornar a página de dashboard - Crear tag con color - Validar que quede guardado el color en la información de tag
-PR-011	8/5/2022	Jorge	FN05	Funcional	Negativo	Retornar a página de dashboard - Crear tag con color erroneo - El sistema toma captura de pantalla de error de color
-PR-012	8/5/2022	Jorge	FN06	Funcional	Positivo	Retornar a página de dashboard - Edición de Nombre Tag - El sistema toma captura de pantalla de que el nombre fue cambiado
-PR-013	8/5/2022	Jorge	FN06	Funcional	Negativo	Retornar a página de dashboard - Edición de Tag quitando el nombre - El sistema toma captura de pantalla de error de nombre
-PR-014	8/5/2022	Jorge	FN06	Funcional	Negativo	Retornar a página de dashboard - Edición de Tag indicando un color erroneo - El sistema toma captura de pantalla de error de color
-PR-015	8/5/2022	Jorge	FN07	Funcional	Positivo	Retornar a página de dashboard - Eliminación de Tag - Volver a listado de tags - El sistema toma captura de pantalla de que el tag desaparece de la lista de tags
-PR-016	8/5/2022	Javier	FN08	Funcional	Positivo	Retornar a página de dashboard - Crear Page en estado Publicado - Validar que aparezca con el estado publicado en el listado de Pages
-PR-017	8/5/2022	Javier	FN08	Funcional	Positivo	Retornar a página de dashboard - Crear Page en estado Programado - Validar que aparezca con el estado programado en el listado de Pages
-PR-018	8/5/2022	Javier	FN13	Funcional	Positivo	Retornar a página de dashboard - Eliminar Page en estado Programada - Validar que NO aparezca en el listado de Pages
-PR-019	8/5/2022	Javier	FN14	Funcional	Negativo	Retornar a página de dashboard - Intentar Invitar Staff sin correo electrónico - Validar que el sistema genere error.
-PR-020	8/5/2022	Javier	FN14	Funcional	Negativo	Retornar a página de dashboard - Intentar Invitar Staff con correo electrónico erroneo - Validar que el sistema genere error de correo erroneo.
+Cod. Prueba -> Responsable -> Cod. Funcionalidad -> Tipo Escenario -> Descripición 
+PR-001 -> Afiffe -> FN02 -> Positivo -> Login de usuario en el sistema - Creación de Post en estado publicado - Validar que el post aparezca en la bandeja de publicados
+PR-002 -> Afiffe -> FN02 -> Positivo -> Retornar a página de dashboard - Creación de Post en estado borrador - Validar que el post aparezca en la bandeja de borradores
+PR-003 -> Afiffe -> FN03 -> Positivo -> Retornar a página de dashboard - Edición del cuerpo del Post - Validación de cambios aplicados en la página del blog
+PR-004 -> Afiffe -> FN04 -> Positivo -> Retornar a página de dashboard - Eliminación de Post en estado publicado - Validar que el post no aparezca en el listado de post publicados
+PR-005 -> Afiffe -> FN02 -> Negativo -> Retornar a página de dashboard - Creación de Post sin título en estado publicado - Validar que el post aparezca en el listado de post publicados con titulo (untitled)
+PR-006 -> Jose -> FN03 -> Negativo -> Retornar a página de dashboard - Edición de Post en estado publicado borrando el título - Validar que el post aparezca en el listado de post publicados con titulo (untitled)
+PR-007 -> Jose -> FN02 -> Positivo -> Retornar a página de dashboard - Creación de Post en estado programado - Validar que el post aparezca en la bandeja de programados
+PR-008 -> Jose -> FN05 -> Positivo -> Retornar a página de dashboard - Creación de Tag - Validar que el nuevo Tag aparezca en la lista de tags
+PR-009 -> Jose -> FN05 -> Negativo -> Retornar a página de dashboard - Intento de Creación de Tag sin Nombre - Validar que el sistma emita error
+PR-010 -> Jose -> FN05 -> Positivo -> Retornar a página de dashboard - Crear tag con color - Validar que quede guardado el color en la información de tag
+PR-011 -> Jorge -> FN05 -> Negativo -> Retornar a página de dashboard - Crear tag con color erroneo - El sistema toma captura de pantalla de error de color
+PR-012 -> Jorge -> FN06 -> Positivo -> Retornar a página de dashboard - Edición de Nombre Tag - El sistema toma captura de pantalla de que el nombre fue cambiado
+PR-013 -> Jorge -> FN06 -> Negativo -> Retornar a página de dashboard - Edición de Tag quitando el nombre - El sistema toma captura de pantalla de error de nombre
+PR-014 -> Jorge -> FN06 -> Negativo -> Retornar a página de dashboard - Edición de Tag indicando un color erroneo - El sistema toma captura de pantalla de error de color
+PR-015 -> Jorge -> FN07 -> Positivo -> Retornar a página de dashboard - Eliminación de Tag - Volver a listado de tags - El sistema toma captura de pantalla de que el tag desaparece de la lista de tags
+PR-016 -> Javier -> FN08 -> Positivo -> Retornar a página de dashboard - Crear Page en estado Publicado - Validar que aparezca con el estado publicado en el listado de Pages
+PR-017 -> Javier -> FN08 -> Positivo -> Retornar a página de dashboard - Crear Page en estado Programado - Validar que aparezca con el estado programado en el listado de Pages
+PR-018 -> Javier -> FN13 -> Positivo -> Retornar a página de dashboard - Eliminar Page en estado Programada - Validar que NO aparezca en el listado de Pages
+PR-019 -> Javier -> FN14 -> Negativo -> Retornar a página de dashboard - Intentar Invitar Staff sin correo electrónico - Validar que el sistema genere error.
+PR-020 -> Javier -> FN14 -> Negativo -> Retornar a página de dashboard - Intentar Invitar Staff con correo electrónico erroneo - Validar que el sistema genere error de correo erroneo.
 
 
